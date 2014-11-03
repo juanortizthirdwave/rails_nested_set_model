@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :categories do
     collection do
       get :manage
+      get :nested_options
+      get :expand
+      get :node_manage
 
+      post :expand_node
       # required for Sortable GUI server side actions
       post :rebuild
     end
@@ -14,7 +18,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'categories#manage'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

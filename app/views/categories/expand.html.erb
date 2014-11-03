@@ -1,0 +1,8 @@
+<p><%= link_to raw('&larr; back'), '/' %></p>
+<p><%= link_to 'Create New Page', "#" %></p>
+
+<p>Count: <%= @pages.to_a.count %></p>
+
+<ol class="sortable_tree expandable" data-max_level="5" data-rebuild_url="<%= rebuild_categories_url %>", data-expand_node_url="<%= expand_node_categories_url %>" data-cookie_store="true" data-cookie_scope="<%= @pages.first.class %>">
+  <%= expandable_tree @pages %>
+</ol>

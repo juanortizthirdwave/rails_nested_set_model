@@ -1,5 +1,5 @@
-<ol class='tree'><%= just_tree @pages %>
+<p><%= link_to raw('&larr; back'), '/' %></p>
 
-<hr>
-
-<ol class="sortable_tree#{data: { max_levels: 5, rebuild_url: rebuild_pages_url }}"> <%= sortable_tree @pages %>
+<ol class="sortable_tree" data-rebuild-url="<%= rebuild_categories_url %>" >
+  <%= build_server_tree @pages, :type => :sortable %>
+</ol>

@@ -1,0 +1,10 @@
+<p><%= link_to raw('&larr; back'), '/' %></p>
+
+<ol class="sortable_tree" data-rebuild-url="#" >
+  <%= build_server_tree @pages, :type => :sortable %>
+</ol>
+
+<h2>Root:</h2>
+<div><%= @root.inspect %></div>
+<h2>Root's children:</h2>
+<div><%= @pages.inspect %></div>
