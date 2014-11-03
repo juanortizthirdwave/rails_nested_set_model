@@ -1,0 +1,5 @@
+<ol class='tree'><%= just_tree @pages %>
+
+<hr>
+
+<ol class="sortable_tree#{data: { max_levels: 5, rebuild_url: rebuild_pages_url }}"> <%= sortable_tree @pages %>
